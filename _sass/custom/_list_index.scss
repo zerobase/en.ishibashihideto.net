@@ -1,0 +1,43 @@
+main.list.index {
+  .item {
+    @include clearfix;
+    $color: $base-font-color;
+    $hover-color: $base-link-color;
+    margin: $base-spacing 0;
+
+    .link {
+      display: block;
+      color: $color;
+      
+      &:hover,
+      &:focus {
+        color: $hover-color;
+      }
+
+      .title {
+        font-size: modular-scale(1);
+        margin-bottom: $base-padding;
+      }
+
+      .thumbnail {
+        float: right;
+        margin: 0 0 $base-padding $base-padding;
+        width: 5em;
+        height: 5em;
+      }
+
+      .meta.subtitle {
+        font-size: modular-scale(-1);
+        margin-left: $base-padding;
+      }
+      
+      .meta.description {
+        margin-bottom: $base-padding;
+      }
+
+      .meta.time {
+        font-size: modular-scale(-1);
+      }
+    }
+  }
+}

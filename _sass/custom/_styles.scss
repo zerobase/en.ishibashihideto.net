@@ -1,0 +1,46 @@
+// This is the root of custom stylesheets imported by css/main.scss
+
+body {
+  margin: 0;
+
+  @include media($medium-viewport) {
+    // font-size: modular-scale(1);
+  }
+
+  @include media($large-viewport) {
+    font-size: modular-scale(1);
+  }
+}
+
+.container {
+  @include outer-container;
+}
+
+main {
+  padding: $base-padding;
+  margin: $base-padding 0 0 0;
+}
+
+small,
+.footnote,
+.footnotes {
+  font-size: $base-font-size * 0.8;
+  //color: darken($base-font-color, 10);
+
+  a {
+    //color: darken($base-link-color, 10);
+  }
+}
+
+.footnote {
+  text-decoration: underline;
+}
+
+@import "extends/border-top";
+@import "audio";
+@import "commands_list";
+@import "list_index";
+@import "main_article";
+@import "tab_navigation";
+@import "website_footer";
+@import "website_header";

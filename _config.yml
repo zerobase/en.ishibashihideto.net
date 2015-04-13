@@ -1,0 +1,61 @@
+# Build settings
+exclude: [CNAME, Guardfile, Gemfile, Gemfile.lock, LICENSE, LICENSE_FOR_CONTENTS, LICENSE_FOR_SOFTWARE, README.md]
+
+# Site settings
+title: Hideto Ishibashi
+author: Hideto Ishibashi
+author_link: https://plus.google.com/+IshibashiHideto/
+thumbnail: http://en.ishibashihideto.net/images/thumbnail.png
+email: hidetoi@gmail.com
+description: "an information architect, a fan of the Web and innovations"
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://en.ishibashihideto.net" # the base hostname & protocol for your site
+twitter_username: zerobase
+github_username:  zerobase
+main_feed: http://feeds.feedburner.com/HidetoIshibashiE
+
+# Build settings
+markdown: kramdown
+highlighter: pygments
+gems:
+  - jekyll-redirect-from
+  - jekyll-sitemap
+
+# Blog
+permalink: date # previously: /blog/:categories/:title/
+
+# Default variables
+
+defaults:
+  -
+    scope:
+      path: "" # an empty string here means all files in the project
+      type: "posts" # previously `post` in Jekyll 2.2.
+    values:
+      layout: "post"
+      categories: "blog"
+  -
+    scope:
+      path: "activity"
+      type: "posts"
+    values:
+      layout: "post"
+      categories: "activity"
+  -
+    scope:
+      path: "about"
+      type: "posts"
+    values:
+      layout: "post"
+      categories: "about"
+
+# Twitter
+twitter_user: zerobase
+twitter_tweet_button: true
+
+# Facebook
+facebook_app_id: 719335978096070
+facebook_locale: en_US
+
+# Google Analytics
+google_analytics_tracking_id: UA-41591703-1
